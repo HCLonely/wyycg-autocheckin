@@ -77,7 +77,7 @@ def send(id, message):
 
 
 def scsend(SCKEY, message):
-    sc_url = 'https://qmsg.zendee.cn/send/{}/?msg={}'.format(SCKEY, message)
+    sc_url = 'https://qmsg.zendee.cn/send/{}?msg={}'.format(SCKEY, message)
     if sc_enable:
         r.get(url=sc_url)
 
