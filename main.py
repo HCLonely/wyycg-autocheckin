@@ -77,7 +77,7 @@ def send(id, message):
 
 
 def scsend(SCKEY, message):
-    sc_url = 'http://sc.ftqq.com/{}.send?text=网易云游戏自动签到脚本&desp={}'.format(SCKEY, message)
+    sc_url = 'https://qmsg.zendee.cn/send/{}/?msg={}'.format(SCKEY, message)
     if sc_enable:
         r.get(url=sc_url)
 
@@ -135,14 +135,11 @@ if __name__ == "__main__":
     网易云游戏自动签到脚本: https://github.com/GamerNoTitle/wyycg-autocheckin
     '''.format(len(success), len(failure), len(cookies), outputmsg)
     scinfomsg = '''
-    感谢使用来自<a herf='https://bili33.top'>GamerNoTitle</a>的<a herf='https://github.com/GamerNoTitle/wyycg-autocheckin'>网易云游戏自动签到脚本</a>！<br>
-    今日签到结果如下：<br>
-    成功数量：{0}/{2}<br>
-    失败数量：{1}/{2}<br>
-    具体情况如下：<br>
+    网易云游戏签到结果如下：
+    成功数量：{0}/{2}
+    失败数量：{1}/{2}
+    具体情况如下：
     {3}
-    GamerNoTitle: https://bili33.top
-    网易云游戏自动签到脚本: https://github.com/GamerNoTitle/wyycg-autocheckin
     '''.format(len(success), len(failure), len(cookies), outputmsg)
 
     scsend(sckey, scinfomsg)
