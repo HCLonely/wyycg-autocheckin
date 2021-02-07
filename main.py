@@ -134,13 +134,11 @@ if __name__ == "__main__":
     GamerNoTitle: https://bili33.top
     网易云游戏自动签到脚本: https://github.com/GamerNoTitle/wyycg-autocheckin
     '''.format(len(success), len(failure), len(cookies), outputmsg)
-    scinfomsg = '''
-    网易云游戏签到结果如下：
-    成功数量：{0}/{2}
-    失败数量：{1}/{2}
-    具体情况如下：
-    {3}
-    '''.format(len(success), len(failure), len(cookies), outputmsg)
+    scinfomsg = '''网易云游戏签到结果如下：
+成功数量：{0}/{2}
+失败数量：{1}/{2}
+具体情况如下：
+{3}'''.format(len(success), len(failure), len(cookies), outputmsg)
 
     scsend(sckey, scinfomsg)
     send(teleid, teleinfomsg)
