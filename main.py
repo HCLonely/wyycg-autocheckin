@@ -144,4 +144,4 @@ if __name__ == "__main__":
     send(teleid, teleinfomsg)
     print(teleinfomsg)
     if (len(failure) != 0):
-        raise Error
+        #raise Error
