@@ -143,3 +143,5 @@ if __name__ == "__main__":
     scsend(sckey, scinfomsg)
     send(teleid, teleinfomsg)
     print(teleinfomsg)
+    if (len(failure) != 0):
+        raise Error
